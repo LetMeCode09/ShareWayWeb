@@ -55,9 +55,9 @@ export default function UserDetails() {
         <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
             <h2 style={{ margin: 0 }}>User #{item?.id}</h2>
             <div className="actions">
-            <Link to={`/users/${id}/edit`}>{t.edit}</Link>
-            <button onClick={onDelete}>{t.delete}</button>
-            <Link to="/users">{t.back}</Link>
+                <Link className="btn btn-edit" to={`/users/${id}/edit`}>{t.edit}</Link>
+                <button className="btn btn-delete" onClick={onDelete}>{t.delete}</button>
+                <Link className="btn btn-ghost" to="/users">{t.back}</Link>
             </div>
         </div>
 
@@ -82,11 +82,6 @@ export default function UserDetails() {
             <div className="detail-label">Verified</div>
             <div className="detail-value"><Badge ok={Boolean(item.verified)} /></div>
             </div>
-
-            <details className="raw">
-            <summary>Raw JSON</summary>
-            <pre style={{ marginTop: 10 }}>{JSON.stringify(item, null, 2)}</pre>
-            </details>
         </div>
         </div>
     );
