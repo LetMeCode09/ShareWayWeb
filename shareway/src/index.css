@@ -1,0 +1,260 @@
+/* ===== RESET GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f7, #e4ecf5);
+    min-height: 100vh;
+    color: #1e293b;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* ===== NAV BOTONES ===== */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 8px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-buttons button:hover {
+    background: #0ea5e9;
+    color: white;
+    border-color: #0ea5e9;
+}
+
+/* ===== TITULOS ===== */
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* ===== SEARCH + FILTROS ===== */
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+input, select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #0ea5e9;
+}
+
+/* ===== BOTONES ===== */
+button {
+    background: #0ea5e9;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #0284c7;
+}
+
+button.secondary {
+    background: #64748b;
+}
+
+button.danger {
+    background: #ef4444;
+}
+
+button.danger:hover {
+    background: #dc2626;
+}
+
+button.success {
+    background: #22c55e;
+}
+
+/* ===== LIST CARDS ===== */
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.card-sub {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ===== DETAIL VIEW ===== */
+.detail-box {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.detail-item {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ===== FORM ===== */
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.08);
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* ===== ERROR BOX ===== */
+.error-box {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* ===== LOADING ===== */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* ===== FIX LINKS EN GENERAL ===== */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ===== CARDS COMO LINK SIN MORADO ===== */
+.card {
+    display: block;
+    color: inherit;
+}
+
+.card * {
+    text-decoration: none !important;
+}
+
+/* ===== MEJOR ESPACIADO EN LISTAS ===== */
+.grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px;
+}
