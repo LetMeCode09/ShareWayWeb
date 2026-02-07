@@ -83,7 +83,7 @@ export default function ReservationsList() {
             <div className="grid">
             {filteredSorted.map((r) => (
                 <Link key={r.id} to={`/reservations/${r.id}`} className="card">
-                    <div className="card-title">Reservation</div>
+                    <div className="card-title">Reservation of: {r.user?.name ?? "Unknown"}</div>
                     <div className="card-sub">Date: {String(r.reservationDate)}</div>
                     <div className="card-sub">
                         Seats: {r.numberOfSeats} · Total: {r.totalPrice}€ · Confirmed: {String(r.confirmed)}

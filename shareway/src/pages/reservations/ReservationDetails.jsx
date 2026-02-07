@@ -79,7 +79,7 @@ export default function ReservationDetails() {
     return (
         <div>
             <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
-                <h2 style={{ margin: 0 }}>Reservation #{item?.id}</h2>
+                <h2 style={{ margin: 0 }}>Reservation</h2>
                 <div className="actions">
                     <Link className="btn btn-edit" to={`/reservations/${id}/edit`}>{t.edit}</Link>
                     <button className="btn btn-delete" onClick={onDelete}>{t.delete}</button>
@@ -88,9 +88,7 @@ export default function ReservationDetails() {
             </div>
 
             <div className="detail-card" style={{ marginTop: 12 }}>
-                <div style={{ fontSize: 18, fontWeight: 700 }}>
-                    {item.comment ? item.comment : "Reservation details"}
-                </div>
+                <div style={{ fontSize: 18, fontWeight: 700 }}>Comentario: {item.comment ? item.comment : "Reservation details"}</div>
 
                 <div className="detail-grid">
                     <div className="detail-label">Reservation date</div>
