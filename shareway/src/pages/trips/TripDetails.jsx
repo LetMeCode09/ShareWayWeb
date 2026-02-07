@@ -53,7 +53,7 @@ export default function TripDetails() {
     return (
         <div>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
-            <h2 style={{ margin: 0 }}>Trip #{item?.id}</h2>
+            <h2 style={{ margin: 0 }}>Trip</h2>
             <div className="actions">
                 <Link className="btn btn-edit" to={`/trips/${id}/edit`}>{t.edit}</Link>
                 <button className="btn btn-delete" onClick={onDelete}>{t.delete}</button>

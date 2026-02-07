@@ -53,7 +53,7 @@ export default function UserDetails() {
     return (
         <div>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
-            <h2 style={{ margin: 0 }}>User #{item?.id}</h2>
+            <h2 style={{ margin: 0 }}>User</h2>
             <div className="actions">
                 <Link className="btn btn-edit" to={`/users/${id}/edit`}>{t.edit}</Link>
                 <button className="btn btn-delete" onClick={onDelete}>{t.delete}</button>
